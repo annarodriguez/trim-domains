@@ -1,0 +1,5 @@
+select substring(websiteurl from '.*://([^/]*)') as domain_name, 
+  count(id) 
+  from users 
+  group by websiteurl 
+  order by count desc
